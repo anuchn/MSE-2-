@@ -8,7 +8,7 @@ function Login() {
 
   const submit = async (e) => {
     e.preventDefault();
-    const res = await axios.post("https://student-grievance-management-system-b34w.onrender.com/api/login", form);
+    const res = await axios.post("https://mse-2-cfpo.onrender.com/api/login", form);
 
     localStorage.setItem("token", res.data.token);
     navigate("/dashboard");

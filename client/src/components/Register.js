@@ -8,7 +8,7 @@ export default function Register() {
 
   const submit = async (e) => {
     e.preventDefault();
-    await axios.post("https://student-grievance-management-system-b34w.onrender.com/api/register", form);
+    await axios.post("https://mse-2-cfpo.onrender.com/api/register", form);
     navigate("/login");
   };
 

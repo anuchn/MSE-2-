@@ -15,7 +15,7 @@ function Dashboard() {
 
   // fetch data
   const fetchData = async () => {
-    const res = await axios.get("https://student-grievance-management-system-b34w.onrender.com/api/grievances", { headers });
+    const res = await axios.get("https://mse-2-cfpo.onrender.com/api/grievances", { headers });
     setData(res.data);
   };
 
@@ -26,20 +26,20 @@ function Dashboard() {
   // add
   const submit = async (e) => {
     e.preventDefault();
-    await axios.post("https://student-grievance-management-system-b34w.onrender.com/api/grievances", form, { headers });
+    await axios.post("https://mse-2-cfpo.onrender.com/api/grievances", form, { headers });
     fetchData();
   };
 
   // delete
   const del = async (id) => {
-    await axios.delete(`https://student-grievance-management-system-b34w.onrender.com/api/grievances/${id}`, { headers });
+    await axios.delete(`https://mse-2-cfpo.onrender.com/api/grievances/${id}`, { headers });
     fetchData();
   };
 
   // search
   const searchFn = async () => {
     const res = await axios.get(
-      `https://student-grievance-management-system-b34w.onrender.com/api/grievances/search?title=${search}`,
+      `https://mse-2-cfpo.onrender.com/api/grievances/search?title=${search}`,
       { headers }
     );
     setData(res.data);
