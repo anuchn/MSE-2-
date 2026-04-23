@@ -19,10 +19,12 @@ function Dashboard() {
     setData(res.data);
   };
 
-  useEffect(() => {
-    fetchData();
-  }, []);
-
+useEffect(() => {
+  const fetchData = async () => {
+    // code
+  };
+  fetchData();
+}, []);
   // add
   const submit = async (e) => {
     e.preventDefault();
